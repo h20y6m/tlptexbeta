@@ -1,0 +1,22 @@
+category Package
+shortdesc Development version pTeX
+depend platex
+depend ptex
+depend uplatex
+depend uptex
+execute AddFormat name=eptex-beta       engine=eptex-beta  options="*eptex.ini"   patterns=language.dat fmttriggers=cm,hyphen-base,knuth-lib,plain,ptex-base,ptex-fonts,etex
+execute AddFormat name=euptex-beta      engine=euptex-beta options="*euptex.ini"  patterns=language.def fmttriggers=cm,hyphen-base,knuth-lib,plain,uptex-base,uptex-fonts,etex,ptex-base
+execute AddFormat name=platex-beta      engine=eptex-beta  options="*platex.ini"  patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,ptex-fonts,latex
+execute AddFormat name=platex-beta-dev  engine=eptex-beta  options="*platex.ini"  patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,ptex-fonts,l3kernel,latex-base-dev,latex-firstaid-dev
+execute AddFormat name=ptex-beta        engine=ptex-beta   options="ptex.ini"                           fmttriggers=cm,hyphen-base,knuth-lib,plain,ptex-base,ptex-fonts
+execute AddFormat name=uplatex-beta     engine=euptex-beta options="*uplatex.ini" patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,uptex-fonts,platex,latex
+execute AddFormat name=uplatex-beta-dev engine=euptex-beta options="*uplatex.ini" patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,uptex-fonts,platex,l3kernel,latex-base-dev,latex-firstaid-dev
+execute AddFormat name=uptex-beta       engine=uptex-beta  options="uptex.ini"                          fmttriggers=cm,hyphen-base,knuth-lib,plain,uptex-base,uptex-fonts
+binpattern f bin/${ARCH}/eptex-beta
+binpattern f bin/${ARCH}/euptex-beta
+binpattern f bin/${ARCH}/platex-beta
+binpattern f bin/${ARCH}/platex-beta-dev
+binpattern f bin/${ARCH}/ptex-beta
+binpattern f bin/${ARCH}/uplatex-beta
+binpattern f bin/${ARCH}/uplatex-beta-dev
+binpattern f bin/${ARCH}/uptex-beta
