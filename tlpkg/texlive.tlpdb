@@ -1,0 +1,103 @@
+name 00texlive.config
+category TLCore
+revision 2
+depend container_format/xz
+depend container_split_doc_files/1
+depend container_split_src_files/1
+depend frozen/0
+depend minrelease/2021
+depend release/2021-tlptexbeta
+depend revision/7
+
+name 00texlive.installation
+category TLCore
+revision 2
+depend opt_autobackup:1
+depend opt_backupdir:tlpkg/backups
+depend opt_create_formats:1
+depend opt_desktop_integration:1
+depend opt_file_assocs:1
+depend opt_generate_updmap:0
+depend opt_install_docfiles:1
+depend opt_install_srcfiles:1
+depend opt_location:__MASTER__
+depend opt_post_code:1
+depend opt_sys_bin:/usr/local/bin
+depend opt_sys_info:/usr/local/share/info
+depend opt_sys_man:/usr/local/share/man
+depend opt_w32_multi_user:1
+depend setting_available_architectures:win32 x86_64-linux
+
+name ptex-beta
+category Package
+revision 3
+shortdesc Development version pTeX
+depend atbegshi
+depend atveryend
+depend babel
+depend cm
+depend etex
+depend everyshi
+depend firstaid
+depend hyphen-base
+depend knuth-lib
+depend l3backend
+depend l3kernel
+depend l3packages
+depend latex
+depend latex-base-dev
+depend latex-firstaid-dev
+depend latex-fonts
+depend plain
+depend platex
+depend ptex
+depend ptex-base
+depend ptex-beta.ARCH
+depend ptex-fonts
+depend tex-ini-files
+depend unicode-data
+depend uplatex
+depend uptex
+depend uptex-base
+depend uptex-fonts
+execute AddFormat name=eptex-beta       engine=eptex-beta  options="*eptex.ini"   patterns=language.dat fmttriggers=cm,hyphen-base,knuth-lib,plain,ptex-base,ptex-fonts,etex
+execute AddFormat name=euptex-beta      engine=euptex-beta options="*euptex.ini"  patterns=language.def fmttriggers=cm,hyphen-base,knuth-lib,plain,uptex-base,uptex-fonts,etex,ptex-base
+execute AddFormat name=platex-beta      engine=eptex-beta  options="*platex.ini"  patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,ptex-fonts,latex
+execute AddFormat name=platex-beta-dev  engine=eptex-beta  options="*platex.ini"  patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,ptex-fonts,l3kernel,latex-base-dev,latex-firstaid-dev
+execute AddFormat name=ptex-beta        engine=ptex-beta   options="ptex.ini"                           fmttriggers=cm,hyphen-base,knuth-lib,plain,ptex-base,ptex-fonts
+execute AddFormat name=uplatex-beta     engine=euptex-beta options="*uplatex.ini" patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,uptex-fonts,platex,latex
+execute AddFormat name=uplatex-beta-dev engine=euptex-beta options="*uplatex.ini" patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,uptex-fonts,platex,l3kernel,latex-base-dev,latex-firstaid-dev
+execute AddFormat name=uptex-beta       engine=uptex-beta  options="uptex.ini"                          fmttriggers=cm,hyphen-base,knuth-lib,plain,uptex-base,uptex-fonts
+
+name ptex-beta.win32
+category Package
+revision 4
+shortdesc win32 files of ptex-beta
+binfiles arch=win32 size=540
+ bin/win32/eptex-beta.dll
+ bin/win32/eptex-beta.exe
+ bin/win32/euptex-beta.dll
+ bin/win32/euptex-beta.exe
+ bin/win32/platex-beta-dev.exe
+ bin/win32/platex-beta.exe
+ bin/win32/ptex-beta.dll
+ bin/win32/ptex-beta.exe
+ bin/win32/uplatex-beta-dev.exe
+ bin/win32/uplatex-beta.exe
+ bin/win32/uptex-beta.dll
+ bin/win32/uptex-beta.exe
+
+name ptex-beta.x86_64-linux
+category Package
+revision 5
+shortdesc x86_64-linux files of ptex-beta
+binfiles arch=x86_64-linux size=760
+ bin/x86_64-linux/eptex-beta
+ bin/x86_64-linux/euptex-beta
+ bin/x86_64-linux/platex-beta
+ bin/x86_64-linux/platex-beta-dev
+ bin/x86_64-linux/ptex-beta
+ bin/x86_64-linux/uplatex-beta
+ bin/x86_64-linux/uplatex-beta-dev
+ bin/x86_64-linux/uptex-beta
+
