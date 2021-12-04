@@ -1,0 +1,19 @@
+category Package
+shortdesc eptex-dvipdfmx
+depend dvipdfmx
+depend platex
+depend ptex
+depend uplatex
+depend uptex
+execute AddFormat name=eptex-dvipdfmx       engine=eptex-dvipdfmx  options="*eptex.ini"   patterns=language.dat fmttriggers=cm,hyphen-base,knuth-lib,plain,ptex-base,ptex-fonts,etex
+execute AddFormat name=euptex-dvipdfmx      engine=euptex-dvipdfmx options="*euptex.ini"  patterns=language.def fmttriggers=cm,hyphen-base,knuth-lib,plain,uptex-base,uptex-fonts,etex,ptex-base
+execute AddFormat name=platex-dvipdfmx      engine=eptex-dvipdfmx  options="*platex.ini"  patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,ptex-fonts,latex
+execute AddFormat name=platex-dvipdfmx-dev  engine=eptex-dvipdfmx  options="*platex.ini"  patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,ptex-fonts,l3kernel,latex-base-dev,latex-firstaid-dev
+execute AddFormat name=uplatex-dvipdfmx     engine=euptex-dvipdfmx options="*uplatex.ini" patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,uptex-fonts,platex,latex
+execute AddFormat name=uplatex-dvipdfmx-dev engine=euptex-dvipdfmx options="*uplatex.ini" patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,uptex-fonts,platex,l3kernel,latex-base-dev,latex-firstaid-dev
+binpattern f bin/${ARCH}/eptex-dvipdfmx
+binpattern f bin/${ARCH}/euptex-dvipdfmx
+binpattern f bin/${ARCH}/platex-dvipdfmx
+binpattern f bin/${ARCH}/platex-dvipdfmx-dev
+binpattern f bin/${ARCH}/uplatex-dvipdfmx
+binpattern f bin/${ARCH}/uplatex-dvipdfmx-dev
