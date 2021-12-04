@@ -36,3 +36,23 @@ TeX Live Manager（GUIも可）からptex-betaパッケージをインストー�
 ```
 tlmgr install ptex-beta
 ```
+
+## eptex-dvipdfmx
+
+[「TeX ＆ LaTeX Advent Calendar 2021」の4日目](https://gist.github.com/h20y6m/c9b65053c9e694fc5b03c4a72653c18e)のネタ
+
+インストールする前に`texlive/2021/texmf.cnf`に以下を追記する。
+```
+% eptex-dvipdfmx
+TEXINPUTS.eptex-dvipdfmx       = $TEXMFDOTDIR;$TEXMF/tex/{ptex,plain,generic,latex,}//
+TEXINPUTS.euptex-dvipdfmx      = $TEXMFDOTDIR;$TEXMF/tex/{uptex,ptex,plain,generic,latex,}//
+TEXINPUTS.platex-dvipdfmx      = $TEXMFDOTDIR;$TEXMF/tex/{platex,latex,generic,}//
+TEXINPUTS.platex-dvipdfmx-dev  = $TEXMFDOTDIR;$TEXMF/tex/{latex-dev,platex,latex,generic,}//
+TEXINPUTS.uplatex-dvipdfmx     = $TEXMFDOTDIR;$TEXMF/tex/{uplatex,platex,latex,generic,}//
+TEXINPUTS.uplatex-dvipdfmx-dev = $TEXMFDOTDIR;$TEXMF/tex/{latex-dev,uplatex,platex,latex,generic,}//
+```
+
+TeX Live Manager（GUIも可）からeptex-dvipdfmxパッケージをインストールする。
+```
+tlmgr install eptex-dvipdfmx
+```
