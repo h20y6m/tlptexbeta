@@ -7,7 +7,7 @@ depend container_split_src_files/1
 depend frozen/0
 depend minrelease/2021
 depend release/2021-tlptexbeta
-depend revision/7
+depend revision/11
 
 name 00texlive.installation
 category TLCore
@@ -27,6 +27,78 @@ depend opt_sys_info:/usr/local/share/info
 depend opt_sys_man:/usr/local/share/man
 depend opt_w32_multi_user:1
 depend setting_available_architectures:win32 x86_64-linux
+
+name eptex-dvipdfmx
+category Package
+revision 9
+shortdesc eptex-dvipdfmx
+depend atbegshi
+depend atveryend
+depend babel
+depend cm
+depend dvipdfmx
+depend eptex-dvipdfmx.ARCH
+depend etex
+depend everyshi
+depend firstaid
+depend hyphen-base
+depend knuth-lib
+depend l3backend
+depend l3kernel
+depend l3packages
+depend latex
+depend latex-base-dev
+depend latex-firstaid-dev
+depend latex-fonts
+depend plain
+depend platex
+depend ptex
+depend ptex-base
+depend ptex-fonts
+depend tex-ini-files
+depend unicode-data
+depend uplatex
+depend uptex
+depend uptex-base
+depend uptex-fonts
+execute AddFormat name=eptex-dvipdfmx       engine=eptex-dvipdfmx  options="*eptex.ini"   patterns=language.dat fmttriggers=cm,hyphen-base,knuth-lib,plain,ptex-base,ptex-fonts,etex
+execute AddFormat name=euptex-dvipdfmx      engine=euptex-dvipdfmx options="*euptex.ini"  patterns=language.def fmttriggers=cm,hyphen-base,knuth-lib,plain,uptex-base,uptex-fonts,etex,ptex-base
+execute AddFormat name=platex-dvipdfmx      engine=eptex-dvipdfmx  options="*platex.ini"  patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,ptex-fonts,latex
+execute AddFormat name=platex-dvipdfmx-dev  engine=eptex-dvipdfmx  options="*platex.ini"  patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,ptex-fonts,l3kernel,latex-base-dev,latex-firstaid-dev
+execute AddFormat name=uplatex-dvipdfmx     engine=euptex-dvipdfmx options="*uplatex.ini" patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,uptex-fonts,platex,latex
+execute AddFormat name=uplatex-dvipdfmx-dev engine=euptex-dvipdfmx options="*uplatex.ini" patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,uptex-fonts,platex,l3kernel,latex-base-dev,latex-firstaid-dev
+containersize 612
+containerchecksum 9695ed231f8eaa52153ea6f6a3fec313965b436fae2323e75f2f5ae9833c285e15ac1759247e3f8fae6d2d70d0057db4a2c4098a6278eb16053a7e8b2b61e7bd
+
+name eptex-dvipdfmx.win32
+category Package
+revision 10
+shortdesc win32 files of eptex-dvipdfmx
+containersize 352636
+containerchecksum 850492133b531b15b9f615e543f96848088cc3746771d17a849474973e7640ea174b80971985e932c459ca1e382599e729684fbce3b60e3cc36e6258407742ad
+binfiles arch=win32 size=293
+ bin/win32/eptex-dvipdfmx.dll
+ bin/win32/eptex-dvipdfmx.exe
+ bin/win32/euptex-dvipdfmx.dll
+ bin/win32/euptex-dvipdfmx.exe
+ bin/win32/platex-dvipdfmx-dev.exe
+ bin/win32/platex-dvipdfmx.exe
+ bin/win32/uplatex-dvipdfmx-dev.exe
+ bin/win32/uplatex-dvipdfmx.exe
+
+name eptex-dvipdfmx.x86_64-linux
+category Package
+revision 11
+shortdesc x86_64-linux files of eptex-dvipdfmx
+containersize 367720
+containerchecksum a18eba125897848871e4c3381a7b5cb1b5264212d3eb4ea3f3773922c946ffc6e71a1a8af7a6242aed9fda70d3c7d64dd36e49841d38a8882621300adba69aa5
+binfiles arch=x86_64-linux size=406
+ bin/x86_64-linux/eptex-dvipdfmx
+ bin/x86_64-linux/euptex-dvipdfmx
+ bin/x86_64-linux/platex-dvipdfmx
+ bin/x86_64-linux/platex-dvipdfmx-dev
+ bin/x86_64-linux/uplatex-dvipdfmx
+ bin/x86_64-linux/uplatex-dvipdfmx-dev
 
 name ptex-beta
 category Package
