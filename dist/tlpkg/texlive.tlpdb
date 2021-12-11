@@ -7,7 +7,7 @@ depend container_split_src_files/1
 depend frozen/0
 depend minrelease/2021
 depend release/2021-tlptexbeta
-depend revision/11
+depend revision/17
 
 name 00texlive.installation
 category TLCore
@@ -30,7 +30,7 @@ depend setting_available_architectures:win32 x86_64-linux
 
 name eptex-dvipdfmx
 category Package
-revision 9
+revision 10
 shortdesc eptex-dvipdfmx
 depend atbegshi
 depend atveryend
@@ -67,15 +67,15 @@ execute AddFormat name=platex-dvipdfmx      engine=eptex-dvipdfmx  options="*pla
 execute AddFormat name=platex-dvipdfmx-dev  engine=eptex-dvipdfmx  options="*platex.ini"  patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,ptex-fonts,l3kernel,latex-base-dev,latex-firstaid-dev
 execute AddFormat name=uplatex-dvipdfmx     engine=euptex-dvipdfmx options="*uplatex.ini" patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,uptex-fonts,platex,latex
 execute AddFormat name=uplatex-dvipdfmx-dev engine=euptex-dvipdfmx options="*uplatex.ini" patterns=language.dat fmttriggers=atbegshi,atveryend,babel,cm,everyshi,firstaid,hyphen-base,l3backend,l3kernel,l3packages,latex,latex-fonts,tex-ini-files,unicode-data,uptex-fonts,platex,l3kernel,latex-base-dev,latex-firstaid-dev
-containersize 612
-containerchecksum 9695ed231f8eaa52153ea6f6a3fec313965b436fae2323e75f2f5ae9833c285e15ac1759247e3f8fae6d2d70d0057db4a2c4098a6278eb16053a7e8b2b61e7bd
+containersize 616
+containerchecksum 1e70885ccc0773b5f20abcd8b65fe396db08439c0eaf05329eb3ebac41a912d435aebca62d4568610ddecd9eee73dc9c913f798f341af0acf9299d7d615a95f8
 
 name eptex-dvipdfmx.win32
 category Package
-revision 10
+revision 11
 shortdesc win32 files of eptex-dvipdfmx
-containersize 352636
-containerchecksum 850492133b531b15b9f615e543f96848088cc3746771d17a849474973e7640ea174b80971985e932c459ca1e382599e729684fbce3b60e3cc36e6258407742ad
+containersize 352668
+containerchecksum 3c9a66e11bbf4804bc8bd0c57c68fc84af96c949468ed40309013ac3f3e6534bb3326e03ad4cfa5e993e0ebfb44c7c38cb8021609d6639da4060a27620288fef
 binfiles arch=win32 size=293
  bin/win32/eptex-dvipdfmx.dll
  bin/win32/eptex-dvipdfmx.exe
@@ -88,10 +88,10 @@ binfiles arch=win32 size=293
 
 name eptex-dvipdfmx.x86_64-linux
 category Package
-revision 11
+revision 12
 shortdesc x86_64-linux files of eptex-dvipdfmx
-containersize 367720
-containerchecksum a18eba125897848871e4c3381a7b5cb1b5264212d3eb4ea3f3773922c946ffc6e71a1a8af7a6242aed9fda70d3c7d64dd36e49841d38a8882621300adba69aa5
+containersize 367888
+containerchecksum 680870fbfd9b714e1be1ed9aba066efadb7b8d8499fcf6484055c5810b1bbf74283b3414cebd981ac148db94902390a891d52b298e0a709794be5893108241a1
 binfiles arch=x86_64-linux size=406
  bin/x86_64-linux/eptex-dvipdfmx
  bin/x86_64-linux/euptex-dvipdfmx
@@ -145,10 +145,10 @@ containerchecksum 3aa520ab3169549799a2c294eef2bf48a8d38fdf0867e28f066ee88553eeeb
 
 name ptex-beta.win32
 category Package
-revision 4
+revision 16
 shortdesc win32 files of ptex-beta
-containersize 546788
-containerchecksum b4d0ce2830a088fb0e07abd89f1641b1103018d95cc8d3e1b7bbb2fd2ad2268d4ee6b02f819eedfd1167b79ecdb543e53498da248512a3b72b9d0bd7e51ae9bb
+containersize 547180
+containerchecksum 490168109da79d07d1b1d18b2468f4eacfeeddc3689d63162785ef85291b1b4bebaf12e1570743831f8201b9dd8df4af5c96b28482b225d0d9f02c37841a743c
 binfiles arch=win32 size=540
  bin/win32/eptex-beta.dll
  bin/win32/eptex-beta.exe
@@ -165,11 +165,11 @@ binfiles arch=win32 size=540
 
 name ptex-beta.x86_64-linux
 category Package
-revision 5
+revision 17
 shortdesc x86_64-linux files of ptex-beta
-containersize 574568
-containerchecksum a107fa92fdecea1c67afc9470b2a63fc0d226357788265114c8223bbdd1f17dc66db0a62e77cd29c67e0db53e83b048dc9f29ad2085c135ce7f1a0e99749d831
-binfiles arch=x86_64-linux size=760
+containersize 576604
+containerchecksum fb043538d6de46242f5ec5f3167c5356f63b689a8ebc973de7ad32d2feb4b6103f3b104a979e88b74f597619c2f37b65bdec0a61017fb2ec4703b22b8e748574
+binfiles arch=x86_64-linux size=761
  bin/x86_64-linux/eptex-beta
  bin/x86_64-linux/euptex-beta
  bin/x86_64-linux/platex-beta

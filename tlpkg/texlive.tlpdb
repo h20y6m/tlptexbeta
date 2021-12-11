@@ -7,7 +7,7 @@ depend container_split_src_files/1
 depend frozen/0
 depend minrelease/2021
 depend release/2021-tlptexbeta
-depend revision/11
+depend revision/17
 
 name 00texlive.installation
 category TLCore
@@ -30,7 +30,7 @@ depend setting_available_architectures:win32 x86_64-linux
 
 name eptex-dvipdfmx
 category Package
-revision 9
+revision 10
 shortdesc eptex-dvipdfmx
 depend atbegshi
 depend atveryend
@@ -70,7 +70,7 @@ execute AddFormat name=uplatex-dvipdfmx-dev engine=euptex-dvipdfmx options="*upl
 
 name eptex-dvipdfmx.win32
 category Package
-revision 10
+revision 11
 shortdesc win32 files of eptex-dvipdfmx
 binfiles arch=win32 size=293
  bin/win32/eptex-dvipdfmx.dll
@@ -84,7 +84,7 @@ binfiles arch=win32 size=293
 
 name eptex-dvipdfmx.x86_64-linux
 category Package
-revision 11
+revision 12
 shortdesc x86_64-linux files of eptex-dvipdfmx
 binfiles arch=x86_64-linux size=406
  bin/x86_64-linux/eptex-dvipdfmx
@@ -137,7 +137,7 @@ execute AddFormat name=uptex-beta       engine=uptex-beta  options="uptex.ini"  
 
 name ptex-beta.win32
 category Package
-revision 4
+revision 16
 shortdesc win32 files of ptex-beta
 binfiles arch=win32 size=540
  bin/win32/eptex-beta.dll
@@ -155,9 +155,9 @@ binfiles arch=win32 size=540
 
 name ptex-beta.x86_64-linux
 category Package
-revision 5
+revision 17
 shortdesc x86_64-linux files of ptex-beta
-binfiles arch=x86_64-linux size=760
+binfiles arch=x86_64-linux size=761
  bin/x86_64-linux/eptex-beta
  bin/x86_64-linux/euptex-beta
  bin/x86_64-linux/platex-beta
