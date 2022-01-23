@@ -7,7 +7,7 @@ depend container_split_src_files/1
 depend frozen/0
 depend minrelease/2021
 depend release/2021-tlptexbeta
-depend revision/17
+depend revision/20
 
 name 00texlive.installation
 category TLCore
@@ -137,9 +137,9 @@ execute AddFormat name=uptex-beta       engine=uptex-beta  options="uptex.ini"  
 
 name ptex-beta.win32
 category Package
-revision 16
+revision 19
 shortdesc win32 files of ptex-beta
-binfiles arch=win32 size=540
+binfiles arch=win32 size=543
  bin/win32/eptex-beta.dll
  bin/win32/eptex-beta.exe
  bin/win32/euptex-beta.dll
@@ -155,7 +155,7 @@ binfiles arch=win32 size=540
 
 name ptex-beta.x86_64-linux
 category Package
-revision 17
+revision 20
 shortdesc x86_64-linux files of ptex-beta
 binfiles arch=x86_64-linux size=761
  bin/x86_64-linux/eptex-beta
