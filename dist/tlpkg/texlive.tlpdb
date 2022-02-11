@@ -7,7 +7,7 @@ depend container_split_src_files/1
 depend frozen/0
 depend minrelease/2021
 depend release/2021-tlptexbeta
-depend revision/20
+depend revision/23
 
 name 00texlive.installation
 category TLCore
@@ -145,10 +145,10 @@ containerchecksum 3aa520ab3169549799a2c294eef2bf48a8d38fdf0867e28f066ee88553eeeb
 
 name ptex-beta.win32
 category Package
-revision 19
+revision 22
 shortdesc win32 files of ptex-beta
-containersize 552496
-containerchecksum ad18b09ebe66ae656ac3ad048d443d2e90d9aa002e23c4ecd51e075add0aa8abd30f49110623d55129add71abb90a11da1e5435209c1f66c8e0a4fc470d43fe2
+containersize 553712
+containerchecksum aa128a48b1ba672466ad7902b659647da8932529a62fc2f1dd5f440d87415e151f4ec186dc6fc6587ff37cadcb5eeb96596f1c2ceeed7c25fc80a1ee0f3b12d9
 binfiles arch=win32 size=543
  bin/win32/eptex-beta.dll
  bin/win32/eptex-beta.exe
@@ -165,11 +165,11 @@ binfiles arch=win32 size=543
 
 name ptex-beta.x86_64-linux
 category Package
-revision 20
+revision 23
 shortdesc x86_64-linux files of ptex-beta
-containersize 574644
-containerchecksum f54de5d79056765ff30218bd8630ee1f35bc01ddff420be8313f2d372c298907644807c7c180ce00c1af3c6d97a8a9b23ead8b72270707a89956d4376fd1c6d0
-binfiles arch=x86_64-linux size=761
+containersize 577088
+containerchecksum f6e15b132efd597f441809305b98d2f3211199cff98539ec1a51b95646550bcb4a19f2769163dd990d437744a22838b081283f7cabd50f7c394130149bcf7d3d
+binfiles arch=x86_64-linux size=763
  bin/x86_64-linux/eptex-beta
  bin/x86_64-linux/euptex-beta
  bin/x86_64-linux/platex-beta
